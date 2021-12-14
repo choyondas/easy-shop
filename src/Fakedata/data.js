@@ -56,3 +56,26 @@ export const categories = [
   //   title: "shirt",
   // },
 ];
+
+export const popularProducts = [
+  {
+    id: 1,
+    img: "https://www.transparentpng.com/thumb/trouser/gray-nicolls-clothes-fashion-jeans-long-photo-14.png",
+  },
+  {
+    id: 2,
+    img: "https://www.transparentpng.com/thumb/trouser/gray-nicolls-clothes-fashion-jeans-long-photo-14.png",
+  },
+  {
+    id: 3,
+    img: "https://www.transparentpng.com/thumb/trouser/gray-nicolls-clothes-fashion-jeans-long-photo-14.png",
+  },
+  {
+    id: 4,
+    img: "https://www.transparentpng.com/thumb/trouser/gray-nicolls-clothes-fashion-jeans-long-photo-14.png",
+  },
+  {
+    id: 5,
+    img: "https://www.transparentpng.com/thumb/trouser/gray-nicolls-clothes-fashion-jeans-long-photo-14.png",
+  },
+];
