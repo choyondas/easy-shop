@@ -8,8 +8,10 @@ import {
 } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
+import { mobile } from "../../Responsive/Responsive";
 const Container = styled.div`
   display: flex;
+  ${mobile({ flexDirection: "column" })}
 `;
 
 const Left = styled.div`
@@ -41,6 +43,8 @@ const Center = styled.div`
   flex: 1;
 
   padding: 20px;
+
+  ${mobile({ display: "none" })}
 `;
 
 const Title = styled.h3`
@@ -61,6 +65,7 @@ const ListItem = styled.li`
 const Right = styled.div`
   flex: 1;
   padding: 20px;
+  ${mobile({ backgroundColor: "lightblue" })}
 `;
 
 const ContactItem = styled.div`
@@ -110,16 +115,17 @@ const Footer = () => {
       <Right>
         <Title>Contact</Title>
         <ContactItem>
-          <Room /> University Road, Kunming, China
+          <Room style={{ marginRight: "10px" }} /> University Road, Kunming,
+          China
         </ContactItem>
         <ContactItem>
-          <Phone /> +8613085375070
+          <Phone style={{ marginRight: "10px" }} /> +8613085375070
         </ContactItem>
         <ContactItem>
-          <MailOutline /> choyondas08@gmail.com
+          <MailOutline style={{ marginRight: "10px" }} /> choyondas08@gmail.com
         </ContactItem>
 
-        <Payment src="https://i.dlpng.com/static/png/7095793_preview.png" />
+        <Payment src="https://user-images.githubusercontent.com/52581/44384465-5e312780-a570-11e8-9336-7b54978a9e64.png" />
       </Right>
     </Container>
   );

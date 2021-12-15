@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { mobile } from "../../Responsive/Responsive";
 const Container = styled.div`
   flex: 1;
   margin: 5;
@@ -9,6 +9,7 @@ const Container = styled.div`
 const Image = styled.img`
   width: 80%;
   height: 80%;
+  ${mobile({height:"30vh"})}
 `;
 const Info = styled.div`
   top: 0;

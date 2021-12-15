@@ -2,20 +2,24 @@ import { ArrowBackOutlined, ArrowForwardOutlined } from "@material-ui/icons";
 import React, { useState } from "react";
 import styled from "styled-components";
 import { slideItems } from "../../Fakedata/data";
+import { mobile } from "../../Responsive/Responsive";
+import { tablet } from "../../Responsive/Responsive";
+
 const Container = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
-  background-color: #80deea;
   position: relative;
   overflow: hidden;
+  ${mobile({ display:"none"})}
+  ${tablet({ width: "768px" })}
 `;
 
 const Arrow = styled.div`
   width: 50px;
   height: 50px;
-  background-color: white;
-  border-radius: 50px;
+  background-color: #fff7f7;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,10 +28,9 @@ const Arrow = styled.div`
   bottom: 0;
   left: ${(props) => props.direction === "left" && "10px"};
   right: ${(props) => props.direction === "right" && "10px"};
-
   margin: auto;
   cursor: pointer;
-  opacity: 0.8;
+  opacity: 0.5;
   z-index: 2;
 `;
 const Wrapper = styled.div`
@@ -37,11 +40,10 @@ const Wrapper = styled.div`
   transform: translateX(${(props) => props.slideIndex * -100}vw);
 `;
 const Slide = styled.div`
-  display: flex;
-  align-items: center;
   width: 100vw;
   height: 100vh;
-
+  display: flex;
+  align-items: center;
   background-color: #${(props) => props.bg};
 `;
 const ImgContainer = styled.div`
@@ -61,9 +63,9 @@ const Title = styled.h1`
 `;
 const Description = styled.p`
   margin: 50px 0px;
-  font-weight: 500px;
-  letter-spacing: 3px;
   font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 3px;
 `;
 const Button = styled.button`
   padding: 10px;
